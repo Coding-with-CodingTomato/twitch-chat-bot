@@ -1,0 +1,29 @@
+{
+  "name": "twitch-chat-bot",
+  "version": "1.0.0",
+  "description": "Twitch Chatbot für CodingTomato",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coding-with-CodingTomato/twitch-chat-bot.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Coding-with-CodingTomato/twitch-chat-bot/issues"
+  },
+  "homepage": "https://github.com/Coding-with-CodingTomato/twitch-chat-bot#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "dotenv": "^16.0.0",
+    "tmi.js": "^1.8.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}
