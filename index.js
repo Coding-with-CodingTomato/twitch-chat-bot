@@ -5,7 +5,7 @@ require('dotenv').config();
 const client = new tmi.Client({
   options: { debug: false },
   identity: {
-    username: 'codingtomato',
+    username: process.env.BOT_USERNAME,
     password: process.env.OAUTH_TOKEN,
   },
   channels: ['codingtomato'],
