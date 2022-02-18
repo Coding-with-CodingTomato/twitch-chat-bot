@@ -48,7 +48,7 @@ client.on('message', async (channel, tags, message, self) => {
 
   // Discord Kommando
   if (command === 'discord' || command === 'dc') {
-    client.say(channel, '☎️ Schaut auch auf unserem Discord vorbei: https://discord.gg/BaaXYJafE5');
+    client.say(channel, '☎️ Schaut auch auf unserem Discord vorbei: https://discord.gg/Qs7sSq25JU');
   }
 
   // Alle Kommandos
