@@ -1,0 +1,8 @@
+module.exports = {
+  alias: ['set-repo'],
+  async execute(client, channel, args, tags, dbClient) {
+    if (tags['user-type'] !== 'mod' && tags.username !== 'codingtomato') return;
+
+    client.say(channel, 'Github Repo gesetzt!');
+  },
+};
