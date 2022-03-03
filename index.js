@@ -3,7 +3,7 @@ const tmi = require('tmi.js');
 require('dotenv').config();
 const { MongoClient } = require('mongodb');
 
-const url = 'mongodb://localhost:27017';
+const url = process.env.MONGO_CONNECTION_URL;
 const dbClient = new MongoClient(url);
 
 const commandsMap = new Map();
