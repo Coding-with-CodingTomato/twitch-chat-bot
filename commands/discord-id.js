@@ -13,9 +13,9 @@ module.exports = {
 
       await collection.updateOne({ _id: tags['user-id'] }, { $set: { _id: tags['user-id'], dcUserId: discordId } });
 
-      client.say(channel, `@${tags.username} Discord User ID gesetzt!`);
+      client.say(channel, `@${tags.username}, Discord User ID gesetzt!`);
     } catch (error) {
-      client.say(channel, `@${tags.username} Discord User ID konnte nicht gesetzt werden!`);
+      client.say(channel, `@${tags.username}, Discord User ID konnte nicht gesetzt werden!`);
       console.error(error.message);
     } finally {
       await dbClient.close();
