@@ -1,26 +1,25 @@
+const { newCommandGenerated } = require('../lib/customCommands');
+
 module.exports = {
-  alias: ['set-repo'],
+  alias: ['delete-command'],
   async execute(client, channel, args, tags, dbClient) {
     if (tags['user-type'] !== 'mod' && tags.username !== 'codingtomato') return;
 
-    const [newRepoLink] = args;
+    const [command] = args;
 
     try {
       await dbClient.connect();
       await dbClient
         .db('twitch')
-        .collection('chatBot_vars')
-        .updateOne(
-          { _id: 'currentGithubRepo' },
-          { $set: { _id: 'currentGithubRepo', value: newRepoLink } },
-          { upsert: true },
-        );
+        .collection('commands')
+        .findOneAndDelete({ name: command });
+      newCommandGenerated();
     } catch (error) {
       console.error(error.message);
     } finally {
       await dbClient.close();
     }
 
-    client.say(channel, 'Github Repo gesetzt!');
+    client.say(channel, 'Kommando gelöscht!');
   },
 };
